@@ -1,0 +1,64 @@
+{
+    "data":[
+        {
+            "nome":"Espada de Fogo",
+            "price":"100gold",
+            "desc":"Espada de fogo feita com rochas vulcânicas",
+            "image":"./assets/img/espada de fogo.png"
+        }, 
+        {
+            "nome":"Escudo de Guerra",
+            "price":"200gold",
+            "desc":"Escudo feito para guerra",
+            "image":"./assets/img/escudo de gurra.png"
+        },
+        {
+            "nome":"Espada Mágica",
+            "price":"500gold",
+            "desc":"Espada feita pelos magos da torre *Ao segurar ela você consegue teletrasportar em uma área de 10metros*",
+            "image":"./assets/img/spada magica.png"
+        },
+        {
+            "nome":"Espada Rúnica",
+            "price":"400gold",
+            "desc":"Espada rúnica feita pelos anões",
+            "image":"./assets/img/espada runica.png"
+        },
+        {
+            "nome":"Arco Curto",
+            "price":"50gold",
+            "desc":"Arco normal feito de madeira *vem com 50 flechas*",
+            "image":"./assets/img/100px-Arco_curto_de_carvalho_detalhe.png"
+        },
+        {
+            "nome":"Arco Longo",
+            "price":"100gold",
+            "desc":"Arco normal feito de madeira porém recomendado para longas distâncias",
+            "image":"./assets/img/arco longo.png"
+        },
+        {
+            "nome":"Flechas",
+            "price":"1gold unidade",
+            "desc":"Apenas flechas com pontas de aço",
+            "image":"./assets/img/flechs.png"
+        },
+        {
+            "nome":"Flechas rúnicas",
+            "price":"5gold unidade",
+            "desc":"Flechas com pontas rúnicas feita pelos anões",
+            "image":"./assets/img/flecha magica.png"
+        },
+        {
+            "nome":"Poção de cura",
+            "price":"10gold",
+            "desc":"Poção para curar",
+            "image":"./assets/img/poção de vida.png"
+        },
+        {
+            "nome":"Poção de Mana",
+            "price":"10gold",
+            "desc":"Poção para recuperar Mana",
+            "image":"./assets/img/pocao de mana.png"
+        }
+    ]
+}
