@@ -3,7 +3,9 @@ import productsJson from "./itens.json"
 import { Header } from "./components/header";
 import styled, { createGlobalStyle } from "styled-components";
 import "./App.css"
-import background from "./assets/img/1164046.png"
+import background from "./assets/img/thumb-1920-1164041.png"
+import background2 from "./assets/img/ewe.jpg"
+import { Footer } from "./components/footer";
 
 
 function App() {
@@ -13,6 +15,9 @@ function App() {
     <>
       <GlobalStyle/>
       <Header/>
+      <SectionDivision>
+        <h2>Melhor loja para comprar seus equipamentos </h2>
+      </SectionDivision>
       <Section>
         <ul>{
           item.map((element, index) =>{
@@ -29,6 +34,10 @@ function App() {
         }</ul>
 
       </Section>
+      <SectionDivision2>
+        <h2>Os melhores ferreiros da região</h2>
+      </SectionDivision2>
+      <Footer/>
     </>
   );
 }
@@ -48,15 +57,44 @@ const GlobalStyle = createGlobalStyle`
     height:100%;
   }
 `
-const Section = styled.section`
-  padding:120px;
+const SectionDivision = styled.section`
   background: url(${background});
+  height:500px;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Texto', sans-serif;
+  h2{
+    font-size:50px;
+  }
+
+`
+const SectionDivision2 = styled.section`
+background: url(${background2});
+height:500px;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Texto', sans-serif;
+h2{
+  font-size:50px;
+}
+
+`
+
+
+const Section = styled.section`
+  padding:0 120px;
   font-family:'Texto', sans-serif;
   ul{
     display:flex;
     align-items:center;
     justify-content:center;
     flex-flow:wrap row;
+    background-color:#2c2c2c;
+    padding:50px;
   }
   li{
     width:250px;
