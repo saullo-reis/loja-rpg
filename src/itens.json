@@ -15,7 +15,7 @@
         {
             "nome":"Espada Mágica",
             "price":"500gold",
-            "desc":"Espada feita pelos magos da torre *Ao segurar ela você consegue teletrasportar em uma área de 10metros*",
+            "desc":"Espada feita pelos magos da torre",
             "image":"./assets/img/spada magica.png"
         },
         {

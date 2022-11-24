@@ -1,11 +1,12 @@
 import styled from "styled-components"
 import carrinho from "../assets/icon/carrinho-de-compras.png"
+import { Link } from "react-router-dom"
 
 export const Header = () =>{
     return(
         <Section>
-            <h1>Loja RPG</h1>
-            <a href=""><img src={carrinho}></img></a>
+            <Link to={"/"}><h1>Loja RPG</h1></Link> 
+            <Link to={"/produtos/carrinho"}><img src={carrinho}></img></Link>
         </Section>
     )
 }
@@ -32,6 +33,9 @@ const Section = styled.section`
         margin-right:20px;
         background-color:#DAA520;
 
+    }
+    a{
+        text-decoration:none;
     }
     img:hover{
         transform:scale(1.2, 1.2);
