@@ -11,19 +11,18 @@ import { useState } from "react";
 function App() {
   const [data, setData] = useState('');
 
-  const childToParent = () => {
-    
+  const childToParent2 = (childData) => {
+    setData(childData)
   }
-
   return (
     <>
       <GlobalStyle/>
         <BrowserRouter>
-          <Header/>
+          <Header parentToChild={data}/>
           <SectionDivision>
             <h2>Melhor loja para comprar seus equipamentos </h2>
           </SectionDivision>
-          <AppRoutes/>
+          <AppRoutes childToParent2={childToParent2}/>
           <SectionDivision2>
             <h2>Os melhores ferreiros da região</h2>
           </SectionDivision2>

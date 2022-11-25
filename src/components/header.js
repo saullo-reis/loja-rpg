@@ -2,11 +2,18 @@ import styled from "styled-components"
 import carrinho from "../assets/icon/carrinho-de-compras.png"
 import { Link } from "react-router-dom"
 
-export const Header = () =>{
+export const Header = ({parentToChild}) =>{
     return(
         <Section>
-            <Link to={"/"}><h1>Loja RPG</h1></Link> 
-            <Link to={"/produtos/carrinho"}><img src={carrinho}></img></Link>
+            <Link to={"/"}>
+                <h1>Loja RPG</h1>
+            </Link> 
+            <Link to={"/produtos/carrinho"}>
+                <img src={carrinho}></img>
+                {
+                    parentToChild.length > 0 ? <span>{parentToChild.length}</span> : null
+                }
+            </Link>
         </Section>
     )
 }
@@ -23,6 +30,15 @@ const Section = styled.section`
         font-size:100px;
         color:#ffffff;
         margin-left:20px;
+    }
+    span{
+        position:relative;
+        right:40px;
+        width:26px;
+        background-color:red;
+        border-radius:100px;
+        padding:5px;
+        color:white;
     }
     img{
         width:40px;

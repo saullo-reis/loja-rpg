@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import productsJson from "./itens.json"
 
 
-export const Main = () => {
+export const Main = ({childToParent}) => {
     const[item] = useState(productsJson.data)
     const[itemsCarrinho, setItemsCarrinho] = useState([])
     function adicionarCarrinho(element){
@@ -11,7 +11,7 @@ export const Main = () => {
       arrayItems.push(element)
       setItemsCarrinho([...arrayItems, ...itemsCarrinho])
     }
-    console.log(itemsCarrinho)
+    childToParent(itemsCarrinho)
     return(
         <Section>
         <ul>{
@@ -20,9 +20,9 @@ export const Main = () => {
               <li key={index}>
                 <h2>{element.nome}</h2>
                 <img src={require(`${element.image}`)} alt="imagem" />
-                <h2>Preço: {element.price}</h2>
+                <h2>Preço: {element.price} gold</h2>
                 <p>{element.desc}</p>
-                <button onClick={() => adicionarCarrinho(element)} >Adicionar no carrinho</button>
+                <button onClick={() => adicionarCarrinho(element)}>Adicionar no carrinho</button>
               </li>
             )
           })  
@@ -34,12 +34,12 @@ export const Main = () => {
 const Section = styled.section`
   padding:0 120px;
   font-family:'Texto', sans-serif;
+  background-color:#2c2c2c;
   ul{
     display:flex;
     align-items:center;
     justify-content:center;
     flex-flow:wrap row;
-    background-color:#2c2c2c;
     padding:50px;
   }
   li{
@@ -57,6 +57,7 @@ const Section = styled.section`
     justify-content:center;
     transition:1s;
     padding:20px;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.6);
   }
   img{
     width:200px;
@@ -74,6 +75,6 @@ const Section = styled.section`
     transition:1s;
   }
   button:hover{
-    transform:scale(1.1, 1.1)
+    background-color:red;
   }
 `
