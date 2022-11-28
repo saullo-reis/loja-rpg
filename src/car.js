@@ -4,15 +4,14 @@ import styled from "styled-components"
 
 export const Car = ({parentToChild}) =>{
     const arrayCar = parentToChild
-    const [soma , setSoma] = useState(0)
-    useEffect(() =>{
-      arrayCar.map((element, n) => {
-        let valor = arrayCar[n].price
-        setSoma(valor + soma )
-      })
-    },arrayCar.length)
+    var soma = 0;
+
+    for(var i = 0; i < arrayCar.length; i++) {
+        soma += arrayCar[i].price;
+    }
+    console.log(soma);
+
     console.log(soma)
-    console.log(arrayCar)
     return(
         <Section>
             <ul>
@@ -31,9 +30,11 @@ export const Car = ({parentToChild}) =>{
 
                 }
             </ul>
+            <h2>Preço total da compra: {soma} Golds</h2>
             {
               arrayCar.length >= 1 ? <Link to={"/"}><button>Finalizar compra</button></Link> : null
             }
+            
         </Section>
     )
 
@@ -69,7 +70,11 @@ const Section = styled.section`
     padding:20px;
     display:flex;
     align-items:center;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.6);
     
+  }
+  h2{
+    color:white;
   }
   a{
     text-decoration:none;

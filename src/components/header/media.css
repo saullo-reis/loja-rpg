@@ -1,0 +1,8 @@
+h1{
+    font-size:100px;
+}
+@media(max-width: 460px){
+    h1{
+        font-size:60px;
+    }
+}

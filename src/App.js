@@ -1,9 +1,9 @@
-import { Header } from "./components/header";
+import { Header } from "./components/header/header";
 import styled, { createGlobalStyle } from "styled-components";
 import "./App.css"
 import background from "./assets/img/thumb-1920-1164041.png"
 import background2 from "./assets/img/ewe.jpg"
-import { Footer } from "./components/footer";
+import { Footer } from "./components/footer/footer";
 import { AppRoutes } from "./routes/routes";
 import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
@@ -55,6 +55,7 @@ const SectionDivision = styled.section`
   align-items:center;
   justify-content:center;
   font-family:'Texto', sans-serif;
+  padding:20px;
   h2{
     font-size:50px;
   }
@@ -66,6 +67,7 @@ height:500px;
 color:white;
 display:flex;
 align-items:center;
+padding:20px;
 justify-content:center;
 font-family:'Texto', sans-serif;
 h2{

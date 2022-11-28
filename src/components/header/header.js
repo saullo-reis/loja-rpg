@@ -1,6 +1,7 @@
 import styled from "styled-components"
-import carrinho from "../assets/icon/carrinho-de-compras.png"
+import carrinho from "../../assets/icon/carrinho-de-compras.png"
 import { Link } from "react-router-dom"
+import "./media.css"
 
 export const Header = ({parentToChild}) =>{
     return(
@@ -27,7 +28,6 @@ const Section = styled.section`
     justify-content:space-between;
     align-items:center;
     h1{
-        font-size:100px;
         color:#ffffff;
         margin-left:20px;
     }
