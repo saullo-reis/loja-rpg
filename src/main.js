@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { useState, useEffect } from "react";
+import { Section } from "./main-styles";
+import { useState } from "react";
 import productsJson from "./itens.json"
 
 
@@ -11,6 +11,7 @@ export const Main = ({childToParent}) => {
       arrayItems.push(element)
       setItemsCarrinho([...arrayItems, ...itemsCarrinho])
     }
+
     childToParent(itemsCarrinho)
     return(
         <Section>
@@ -31,50 +32,3 @@ export const Main = ({childToParent}) => {
     )
 }
 
-const Section = styled.section`
-  padding:0 120px;
-  font-family:'Texto', sans-serif;
-  background-color:#2c2c2c;
-  ul{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-flow:wrap row;
-    padding:50px;
-  }
-  li{
-    width:250px;
-    height:300px;
-    list-style:none;
-    background-color:black;
-    color:white;
-    margin:0 20px 20px 0;
-    display:flex;
-    padding:20px;
-    border-radius:20px;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    transition:1s;
-    padding:20px;
-    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.6);
-  }
-  img{
-    width:200px;
-    height:150px;
-  }
-  button{
-    border:none;
-    border-radius:5px;
-    margin-top:10px;
-    padding:10px;
-    font-weight:bold;
-    color:white;
-    background-color:#DAA520;
-    cursor:pointer;
-    transition:1s;
-  }
-  button:hover{
-    background-color:red;
-  }
-`
