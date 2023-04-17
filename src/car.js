@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 
 export const Car = ({ parentToChild }) => {
   let arrayCar = parentToChild;
-  var soma = 0;
+  let soma = 0;
 
-  for (var i = 0; i < arrayCar.length; i++) {
-    soma += arrayCar[i].price;
-  }
+  soma = arrayCar.reduce((total, currentNumber) => total + currentNumber.price ,0)
 
   return (
     <Section>
       <ul>
-        {arrayCar.length == 0 ? (
+        {arrayCar.length === 0 ? (
           <h1>Nenhum item adicionado ao carrinho</h1>
         ) : (
           arrayCar.map((element, index) => {
