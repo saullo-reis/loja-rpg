@@ -23,7 +23,7 @@ export const Main = ({childToParent}) => {
                 <img src={require(`${element.image}`)} alt="imagem" />
                 <h2>Preço: {element.price} gold</h2>
                 <p>{element.desc}</p>
-                <button onClick={() => adicionarCarrinho(element)}>Adicionar no carrinho</button>
+                <button onClick={() => adicionarCarrinho(element)}>Adicionar ao carrinho</button>
               </li>
             )
           })  

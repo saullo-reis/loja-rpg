@@ -22,6 +22,7 @@ export const Section = styled.section`
     padding:20px;
     border-radius:20px;
     flex-direction:column;
+    text-align:center;
     align-items:center;
     justify-content:center;
     transition:1s;

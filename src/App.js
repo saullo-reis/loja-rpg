@@ -14,6 +14,7 @@ function App() {
   const childToParent2 = (childData) => {
     setData(childData)
   }
+  
   return (
     <>
       <GlobalStyle/>
