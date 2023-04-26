@@ -17,7 +17,7 @@ export const Car = ({ parentToChild }) => {
             return (
               <li key={index}>
                 <h2>{element.nome}</h2>
-                <img src={require(`${element.image}`)} alt="imagem" />
+                <img src={`${element.image}`} alt="imagem" />
                 <h2>Preço: {element.price}</h2>
                 <p>{element.desc}</p>
               </li>

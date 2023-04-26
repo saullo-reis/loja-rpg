@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 
 export const Section = styled.section`
-  padding:0 120px;
+  padding:30px 120px;
   font-family:'Texto', sans-serif;
   display:flex;
   flex-direction:column;
@@ -18,6 +18,7 @@ export const Section = styled.section`
   }
   h1{
     color:white;
+    text-align: center;
   }
   button{
     margin-bottom:30px;

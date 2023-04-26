@@ -4,61 +4,61 @@
             "nome":"Espada de Fogo",
             "price":100,
             "desc":"Espada de fogo feita com rochas vulcânicas",
-            "image":"./assets/img/espada de fogo.png"
+            "image":"https://i.pinimg.com/originals/9b/b1/e6/9bb1e69c0169d1fb5899bdc20b8a0d77.png"
         }, 
         {
             "nome":"Escudo de Guerra",
             "price":200,
             "desc":"Escudo feito para guerra",
-            "image":"./assets/img/escudo de gurra.png"
+            "image":"https://i.pinimg.com/originals/88/41/aa/8841aa9828a67a0b2d0e2fd0f8c3d3a1.png"
         },
         {
             "nome":"Espada Mágica",
             "price":500,
             "desc":"Espada feita pelos magos da torre",
-            "image":"./assets/img/spada magica.png"
+            "image":"https://staticdelivery.nexusmods.com/mods/2673/images/thumbnails/6691/6691-1657763674-314401507.png"
         },
         {
             "nome":"Espada Rúnica",
             "price":400,
             "desc":"Espada rúnica feita pelos anões",
-            "image":"./assets/img/espada runica.png"
+            "image":"https://wow.zamimg.com/modelviewer/classic/webthumbs/item/114/28530.png"
         },
         {
             "nome":"Arco Curto",
             "price":50,
             "desc":"Arco normal feito de madeira *vem com 50 flechas*",
-            "image":"./assets/img/100px-Arco_curto_de_carvalho_detalhe.png"
+            "image":"https://eldenring.wiki.fextralife.com/file/Elden-Ring/shortbow_lightbow_weapon_elden_ring_wiki_guide_200px.png"
         },
         {
             "nome":"Arco Longo",
             "price":100,
             "desc":"Arco normal feito de madeira porém recomendado para longas distâncias",
-            "image":"./assets/img/arco longo.png"
+            "image":"https://i.pinimg.com/originals/03/af/55/03af5570ffed27557c60f0e0c5d27fc6.png"
         },
         {
             "nome":"Flechas",
             "price":1,
             "desc":"Apenas flechas com pontas de aço",
-            "image":"./assets/img/flechs.png"
+            "image":"https://1.bp.blogspot.com/-D6B7KcbRRXc/VpBvzFY0lrI/AAAAAAAABMc/BHdbaK2NkHA/s1600/Flecha_TP.png"
         },
         {
             "nome":"Flechas rúnicas",
             "price":5,
             "desc":"Flechas com pontas rúnicas feita pelos anões",
-            "image":"./assets/img/flecha magica.png"
+            "image":"https://pt.runescape.wiki/images/thumb/Flecha_de_Wen_5_detalhe.png/800px-Flecha_de_Wen_5_detalhe.png?69967"
         },
         {
             "nome":"Poção de cura",
             "price":10,
             "desc":"Poção para curar",
-            "image":"./assets/img/poção de vida.png"
+            "image":"https://lojauf.weebly.com/uploads/3/7/0/1/37012679/753752939.png?250"
         },
         {
             "nome":"Poção de Mana",
             "price":10,
             "desc":"Poção para recuperar Mana",
-            "image":"./assets/img/pocao de mana.png"
+            "image":"https://imperiomidgord.weebly.com/uploads/1/2/0/9/12094613/646868292.png?227"
         }
     ]
 }

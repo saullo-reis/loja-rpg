@@ -53,6 +53,7 @@ const SectionDivision = styled.section`
   height:500px;
   color:white;
   display:flex;
+  text-shadow: 1px 1px 5px black;
   align-items:center;
   justify-content:center;
   font-family:'Texto', sans-serif;
@@ -67,6 +68,7 @@ background: url(${background2});
 height:500px;
 color:white;
 display:flex;
+text-shadow: 1px 1px 5px black;
 align-items:center;
 padding:20px;
 justify-content:center;

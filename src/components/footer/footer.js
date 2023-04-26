@@ -11,10 +11,11 @@ export const Footer = () =>{
 
 const Section = styled.section`
     display:flex;
-    height:150px;
+    height:30px;
+    padding: 10px;
     color:gray;
     align-items:center;
-    justify-content:flex-end;
+    justify-content:center;
     flex-direction:column;
     a{
         text-decoration:none;

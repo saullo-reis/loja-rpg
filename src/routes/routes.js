@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { Main } from "../main"
-import { Car } from "../car"
+import { Main } from "../components/main/main"
+import { Car } from "../components/main/car/car"
 import { useState } from "react";
 
 const AppRoutes = ({childToParent2}) => {
