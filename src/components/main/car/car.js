@@ -29,13 +29,13 @@ export const Car = ({ parentToChild }) => {
                 <h2>{element.nome}</h2>
                 <img src={`${element.image}`} alt="imagem" />
                 <h2>Preço: {element.price}</h2>
-                <p>{element.desc}</p>
+                <p style={{ textAlign: 'center' }}>{element.desc}</p>
               </li>
             )
           )
         )}
       </ul>
-      <h2>Preço total da compra: {soma} Golds</h2>
+      <h2 >Preço total da compra: {soma} Golds</h2>
       {arrayItems.length >= 1 ? (
         <Link to={"/"}>
           <button

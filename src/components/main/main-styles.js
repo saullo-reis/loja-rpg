@@ -20,7 +20,7 @@ export const Section = styled.section`
     margin:0 20px 20px 0;
     display:flex;
     padding:20px;
-    border-radius:20px;
+    border-radius:8px;
     flex-direction:column;
     text-align:center;
     align-items:center;
@@ -32,6 +32,7 @@ export const Section = styled.section`
   img{
     width:200px;
     height:150px;
+    margin: 20px;
   }
   button{
     border:none;
