@@ -50,14 +50,15 @@ const GlobalStyle = createGlobalStyle`
 `
 const SectionDivision = styled.section`
   background: url(${background});
-  height:500px;
-  color:white;
-  display:flex;
+  height: 500px;
+  color: white;
+  display: flex;
+  text-align: center;
   text-shadow: 1px 1px 5px black;
-  align-items:center;
-  justify-content:center;
-  font-family:'Texto', sans-serif;
-  padding:20px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Texto', sans-serif;
+  padding: 20px;
   h2{
     font-size:50px;
   }
@@ -65,14 +66,15 @@ const SectionDivision = styled.section`
 `
 const SectionDivision2 = styled.section`
 background: url(${background2});
-height:500px;
-color:white;
-display:flex;
+height: 500px;
+color: white;
+text-align: center;
+display: flex;
 text-shadow: 1px 1px 5px black;
 align-items:center;
-padding:20px;
-justify-content:center;
-font-family:'Texto', sans-serif;
+padding: 20px;
+justify-content: center;
+font-family: 'Texto', sans-serif;
 h2{
   font-size:50px;
 }

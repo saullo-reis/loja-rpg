@@ -1,32 +1,42 @@
 import { Section } from "./car-styles";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export const Car = ({ parentToChild }) => {
-  let arrayCar = parentToChild;
-  let soma = 0;
+  const [arrayItems, setArrayItems] = useState(parentToChild)
+  const [soma, setSoma] = useState(0)
 
-  soma = arrayCar.reduce((total, currentNumber) => total + currentNumber.price ,0)
+  const handleClick = (index) => {
+    const newArrayItems = [...arrayItems.slice(0, index), ...arrayItems.slice(index + 1)];
+    setArrayItems(newArrayItems);
+  };
+
+  useEffect(() => {
+    setSoma(arrayItems.reduce((total, currentNumber) => total + currentNumber.price, 0))
+  },[arrayItems, arrayItems.length])
 
   return (
     <Section>
       <ul>
-        {arrayCar.length === 0 ? (
+        {arrayItems.length === 0 ? (
           <h1>Nenhum item adicionado ao carrinho</h1>
         ) : (
-          arrayCar.map((element, index) => {
-            return (
-              <li key={index}>
+          arrayItems.map((element, index) => (
+              <li style={{position: 'relative'}} key={index}>
+                <Scrap onClick={() => handleClick(index)}>X</Scrap>
                 <h2>{element.nome}</h2>
                 <img src={`${element.image}`} alt="imagem" />
                 <h2>Preço: {element.price}</h2>
                 <p>{element.desc}</p>
               </li>
-            );
-          })
+            )
+          )
         )}
       </ul>
       <h2>Preço total da compra: {soma} Golds</h2>
-      {arrayCar.length >= 1 ? (
+      {arrayItems.length >= 1 ? (
         <Link to={"/"}>
           <button
             onClick={() => {
@@ -40,3 +50,20 @@ export const Car = ({ parentToChild }) => {
     </Section>
   );
 };
+
+const Scrap = styled.span`
+  cursor: pointer;
+  background-color: red;
+  padding: 10px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  border-radius: 100%;
+  font-size: 20px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+`

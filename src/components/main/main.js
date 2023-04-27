@@ -30,7 +30,7 @@ export const Main = ({childToParent}) => {
             )
           })  
         }</ul>
-        <ToastContainer/>
+        <ToastContainer position="bottom-left"/>
       </Section>
     )
 }

@@ -56,7 +56,7 @@ export const Section = styled.section`
     margin:0 20px 20px 0;
     display:flex;
     padding:20px;
-    border-radius:20px;
+    border-radius:8px;
     flex-direction:column;
     align-items:center;
     justify-content:center;
