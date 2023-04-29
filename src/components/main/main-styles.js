@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Section = styled.section`
+export const MainStyles = styled.section`
   padding:0 120px;
   font-family:'Texto', sans-serif;
   background-color:#2c2c2c;

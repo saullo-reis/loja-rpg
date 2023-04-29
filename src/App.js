@@ -1,3 +1,4 @@
+import React from "react";
 import { Header } from "./components/header/header";
 import styled, { createGlobalStyle } from "styled-components";
 import "./App.css"

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export const Section = styled.section`
+export const CarStyles = styled.section`
   padding:30px 120px;
   font-family:'Texto', sans-serif;
   display:flex;

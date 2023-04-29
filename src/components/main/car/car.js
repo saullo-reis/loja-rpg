@@ -1,8 +1,9 @@
-import { Section } from "./car-styles";
+import { CarStyles, Section } from "./car-styles";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useEffect } from "react";
 import { useState } from "react";
+import { React } from 'react'
 
 export const Car = ({ parentToChild }) => {
   const [arrayItems, setArrayItems] = useState(parentToChild)
@@ -18,7 +19,7 @@ export const Car = ({ parentToChild }) => {
   },[arrayItems, arrayItems.length])
 
   return (
-    <Section>
+    <CarStyles>
       <ul>
         {arrayItems.length === 0 ? (
           <h1>Nenhum item adicionado ao carrinho</h1>
@@ -47,7 +48,7 @@ export const Car = ({ parentToChild }) => {
           </button>
         </Link>
       ) : null}
-    </Section>
+    </CarStyles>
   );
 };
 

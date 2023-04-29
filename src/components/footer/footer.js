@@ -1,15 +1,16 @@
 import styled from "styled-components"
+import React from "react"
 
-export const Footer = () =>{
-    return(
-        <Section>
+export const Footer = () => {
+    return (
+        <FooterStyle>
             <p>© Saullo Reis</p>
             <a href="https://www.linkedin.com/in/saullo-reis-874852231/"><p>Linkedin</p></a>
-        </Section>
+        </FooterStyle>
     )
 }
 
-const Section = styled.section`
+const FooterStyle = styled.section`
     display:flex;
     height:30px;
     padding: 10px;
@@ -19,6 +20,6 @@ const Section = styled.section`
     flex-direction:column;
     a{
         text-decoration:none;
-        color:gray
+        color:gray;
     }
 `
