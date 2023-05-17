@@ -1,22 +1,21 @@
 import { CarStyles, Section } from "./car-styles";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { useEffect } from "react";
-import { useState } from "react";
 import { React } from 'react'
+import { ToastContainer, toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { removeItems } from "../../../store/store";
+import 'react-toastify/dist/ReactToastify.css';
 
-export const Car = ({ parentToChild }) => {
-  const [arrayItems, setArrayItems] = useState(parentToChild)
-  const [soma, setSoma] = useState(0)
+export const Car = () => {
+  const arrayItems = useSelector((state) => state.items)
+  const dispatch = useDispatch()
+  const soma = arrayItems.reduce((total, currentNumber) => total + currentNumber.price, 0)
 
   const handleClick = (index) => {
-    const newArrayItems = [...arrayItems.slice(0, index), ...arrayItems.slice(index + 1)];
-    setArrayItems(newArrayItems);
+    dispatch(removeItems(index))
+    toast.success('Item removido do carrinho')
   };
-
-  useEffect(() => {
-    setSoma(arrayItems.reduce((total, currentNumber) => total + currentNumber.price, 0))
-  },[arrayItems, arrayItems.length])
 
   return (
     <CarStyles>
@@ -48,7 +47,9 @@ export const Car = ({ parentToChild }) => {
           </button>
         </Link>
       ) : null}
+    <ToastContainer position="bottom-left" />
     </CarStyles>
+    
   );
 };
 

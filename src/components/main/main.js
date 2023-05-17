@@ -4,25 +4,24 @@ import { useState } from "react";
 import productsJson from "./itens.json"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useDispatch } from "react-redux";
+import { addItems } from "../../store/store";
 
-export const Main = ({ childToParent }) => {
+export const Main = () => {
   const [item] = useState(productsJson.data)
-  const [itemsCarrinho, setItemsCarrinho] = useState([])
+  const dispatch = useDispatch()
 
   function adicionarCarrinho(element) {
-    const arrayItems = []
-    arrayItems.push(element)
-    setItemsCarrinho([...arrayItems, ...itemsCarrinho])
+    dispatch(addItems(element))
     toast.success(`Item ${element.nome} adicionado ao carrinho`)
   }
-  childToParent(itemsCarrinho)
   
   return (
     <MainStyles>
       <ul>{
         item.map((element, index) => {
           return (
-            <li key={index}>
+            <li key={index} style={{animationDelay: `${index*0.2}s`}}>
               <h2>{element.nome}</h2>
               <img src={`${element.image}`} alt="imagem" />
               <h2>Preço: {element.price} gold</h2>

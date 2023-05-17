@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
 export const MainStyles = styled.section`
-  padding:0 120px;
+  padding: 0 120px;
   font-family:'Texto', sans-serif;
-  background-color:#2c2c2c;
+  background-color: #000;
   ul{
     display:flex;
     align-items:center;
@@ -15,8 +15,9 @@ export const MainStyles = styled.section`
     width:250px;
     height:300px;
     list-style:none;
-    background-color:black;
-    color:white;
+    opacity: 0;
+    background-color:#777;
+    color:black;
     margin:0 20px 20px 0;
     display:flex;
     padding:20px;
@@ -28,6 +29,7 @@ export const MainStyles = styled.section`
     transition:1s;
     padding:20px;
     box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.6);
+    animation: slide 1s forwards ease;
   }
   img{
     width:200px;
@@ -47,5 +49,16 @@ export const MainStyles = styled.section`
   }
   button:hover{
     background-color:red;
+  }
+
+  @keyframes slide{
+    0%{
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `

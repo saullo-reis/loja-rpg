@@ -12,19 +12,16 @@ import { useState } from "react";
 function App() {
   const [data, setData] = useState('');
 
-  const childToParent2 = (childData) => {
-    setData(childData)
-  }
   
   return (
     <>
       <GlobalStyle/>
         <BrowserRouter>
-          <Header parentToChild={data}/>
+          <Header/>
           <SectionDivision>
             <h2>Melhor loja para comprar seus equipamentos </h2>
           </SectionDivision>
-          <AppRoutes childToParent2={childToParent2}/>
+          <AppRoutes/>
           <SectionDivision2>
             <h2>Os melhores ferreiros da região</h2>
           </SectionDivision2>
@@ -38,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
   *{
     margin:0;
     padding:0;
+    text-decoration: none;
   }
   body{
     margin:0;
